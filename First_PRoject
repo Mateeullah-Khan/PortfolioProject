@@ -1,7 +1,3 @@
-select * from covid_death order by 3,4;
-
--- select * from covid_vac order by 3,4;
-
 
  -- Death Percentage in Pakistan
 Select Location, date, total_cases, total_deaths, (total_deaths*100.0/total_cases) as Death_Percentage 
@@ -29,10 +25,6 @@ Select Location, Max(cast(total_deaths as int)) as Total_Death_Count
 from covid_death
 group by location 
 order by Total_Death_Count desc;	
-
-
--- THINGS Break DOWN by Continent
-
 
 
 -- SHOWING the Continent with Highest Death Counts
